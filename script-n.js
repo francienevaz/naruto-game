@@ -1,38 +1,5 @@
-const naruto = document.getElementById("naruto");
-const shuriken = document.getElementById("shuriken");
-
-function jump () {
-    if (naruto.classList != "jump") {
-      naruto.classList.add('jump');
-
-    setTimeout(function () {
-        naruto.classList.remove('jump');
-    }, 300);  
- } 
-
-}
-
-let isAlive = setInterval(function () {
-    // get current naruto Y position
-    let narutoTop = parseInt(window.getComputedStyle(naruto).getPropertyValue("top"));
-
-    // get current shuriken X position
-    let shurikenLeft = parseInt(window.getComputedStyle(shuriken).getPropertyValue("left")); 
-
-    // detect collision
-    if (shurikenLeft < 50 && shurikenLeft > 0 && narutoTop >= 140) {
-
-        alert('Game Over!')
-    }
-}, 10);
-
-document.addEventListener('keydown', function (event) {
-    jump();
-})
-
-/*
-const naruto = document.querySelect('.naruto')
-const background = document.querySelector('.background');
+const naruto = document.querySelector(".naruto")
+const background = document.querySelector(".background");
 let isJumping = false
 let position = 0;
 
@@ -49,7 +16,7 @@ function jump () {
     isJumping = true;
 
     let upInterval = setInterval(() => {
-        if(position >= 150){
+        if(position >= 250){
             clearInterval(upInterval);
 
             //descendo
@@ -74,13 +41,13 @@ function jump () {
 }
 function createShuriken () {
     const shuriken = document.createElement('div');
-    let shurikenPosition = 1000;
+    let shurikenPosition = 1300;
     let randomTime = Math.random() * 6000;
 
     console.log(randomTime)
 
     shuriken.classList.add('shuriken');
-    shuriken.style.left = 1000 + 'px';
+    shuriken.style.left = 1300 + 'px';
     background.appendChild(shuriken);
 
     let leftInterval = setInterval(() => {
@@ -90,7 +57,7 @@ function createShuriken () {
         } else if (shurikenPosition > 0 && shurikenPosition < 60 && position < 60) {
             //Game Over
             clearInterval(leftInterval);
-            document.body.innerHTML = '<h1 class="game-over"> Game Over!</h1>'
+            alert("Game Over! Refresh and try again!")
 
         } else {
             shurikenPosition -= 10;
@@ -102,4 +69,4 @@ function createShuriken () {
 }
 
 createShuriken();
-document.addEventListener('keyup', handleKeyUp)*/
+document.addEventListener('keyup', handleKeyUp)
