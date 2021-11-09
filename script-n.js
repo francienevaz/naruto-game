@@ -44,17 +44,15 @@ function createShuriken () {
     let shurikenPosition = 1300;
     let randomTime = Math.random() * 6000;
 
-    console.log(randomTime)
-
     shuriken.classList.add('shuriken');
     shuriken.style.left = 1300 + 'px';
     background.appendChild(shuriken);
 
     let leftInterval = setInterval(() => {
-        if (shurikenPosition < -60) {
+        if (shurikenPosition < -150) {
             clearInterval(leftInterval);
             background.removeChild(shuriken);
-        } else if (shurikenPosition > 0 && shurikenPosition < 60 && position < 60) {
+        } else if (shurikenPosition > 0 && shurikenPosition < 150 && position < 150) {
             //Game Over
             clearInterval(leftInterval);
             alert("Game Over! Refresh and try again!")
