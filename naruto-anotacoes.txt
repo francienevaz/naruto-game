@@ -1,0 +1,78 @@
+x = 0
+y = 100
+
+1248 * 1252
+
+x = 1200
+y = 100
+
+924 * 1272
+
+x = 2450
+y = 100
+
+1124 * 1268
+
+/*const sprites = new Image();
+sprites.src = "./img-naruto/naruto3.png";
+let frames = 0;
+
+const canvas = document.querySelector('canvas');
+const contexto = canvas.getContext('2d');
+
+const Naruto = {
+   spriteX: 0, 
+   spriteY: 100,
+   largura: 1248,
+   altura: 1252,
+   x: 0,
+   y: 305,
+   larguraT: 300,
+   alturaT: 300,
+
+   atualiza(){
+    Naruto.x = Naruto.x + 1;
+    },
+
+    movimento: [
+    {spriteX: 0, spriteY: 100,},
+    {spriteX:1200, spriteY: 100},
+    {spriteX: 2450, spriteY: 100},
+    {spriteX:1200, spriteY: 100},
+    ],
+    frameAtual: 0,
+    atualizaOFrameAtual() {     
+        const intervaloDeFrames = 10;
+        const passouOIntervalo = frames % intervaloDeFrames === 0;
+        // console.log('passouOIntervalo', passouOIntervalo)
+  
+        if(passouOIntervalo) {
+          const baseDoIncremento = 1;
+          const incremento = baseDoIncremento + Naruto.frameAtual;
+          const baseRepeticao = Naruto.movimento.length;
+          Naruto.frameAtual = incremento % baseRepeticao
+        }
+    },
+          
+   desenha() {
+       Naruto.atualizaOFrameAtual();
+        const {spriteX, spriteY} = Naruto.movimento[Naruto.frameAtual];
+
+        contexto.drawImage(
+            sprites,
+            spriteX, spriteY,// Sprite X, Sprite Y
+            Naruto.largura, Naruto.altura, // Tmanho do recorte na sprite
+            Naruto.x, Naruto.y, // Onde ela ai ser desenhada
+            Naruto.larguraT, Naruto.alturaT, // tamanho da imagem dentro do canvas
+);
+   }
+}
+
+function loop () {
+  Naruto.atualiza();
+  Naruto.desenha(); 
+
+  frames = frames + 1;    
+  requestAnimationFrame(loop);  
+}
+loop(); */

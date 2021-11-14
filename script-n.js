@@ -30,7 +30,7 @@ function jump () {
                 naruto.style.bottom = position + "px"; 
                 }
 
-            },20);
+            },25);
         } else {
             // subindo
             position += 20;
@@ -49,13 +49,13 @@ function createShuriken () {
     background.appendChild(shuriken);
 
     let leftInterval = setInterval(() => {
-        if (shurikenPosition < -150) {
+        if (shurikenPosition < -100) {
             clearInterval(leftInterval);
             background.removeChild(shuriken);
-        } else if (shurikenPosition > 0 && shurikenPosition < 150 && position < 150) {
+        } else if (shurikenPosition > 0 && shurikenPosition < 100 && position < 100) {
             //Game Over
             clearInterval(leftInterval);
-            alert("Game Over! Refresh and try again!")
+            document.body.innerHTML = `<h1>Game Over!</h1>`
 
         } else {
             shurikenPosition -= 10;
@@ -63,8 +63,8 @@ function createShuriken () {
         }
     },20);
 
-    setTimeout(createShuriken, randomTime)
+    setTimeout(createShuriken, randomTime);
 }
 
 createShuriken();
-document.addEventListener('keyup', handleKeyUp)
+document.addEventListener('keyup', handleKeyUp);
