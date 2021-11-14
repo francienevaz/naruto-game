@@ -12,7 +12,7 @@ body {
     background-image: url(/img-naruto/background.jpg);
     background-size: 1300px;
     background-repeat: repeat-x;
-    animation: slideright 600s infinite linear;
+    animation: slideright 150s infinite linear;
 }
 .naruto {
     width: 200px;
