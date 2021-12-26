@@ -9,7 +9,7 @@ body {
     height: 500px;
     border: 1px solid black;
     margin-top: 180px;
-    background-image: url(/img-naruto/background.jpg);
+    background-image: url(/naruto-game/img-naruto/background.jpg);
     background-size: 1300px;
     background-repeat: repeat-x;
     animation: slideright 150s infinite linear;
@@ -18,7 +18,7 @@ body {
     width: 200px;
     height: 200px;
     bottom: 0;
-    background-image: url(/img-naruto/naruto.png);
+    background-image: url(/naruto-game/img-naruto/naruto.png);
     background-size: 200px 200px;
     position: absolute;
     
@@ -29,7 +29,7 @@ body {
     height: 60px;
     bottom: 100px;
     position: absolute;  
-    background-image: url(/img-naruto/shuriken.png);
+    background-image: url(/naruto-game/img-naruto/shuriken.png);
     background-size: 75px; 
     left: 1240px;
 }
