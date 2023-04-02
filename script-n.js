@@ -9,6 +9,7 @@ function handleKeyUp (event){
         if (!isJumping) {
           jump(); 
           createShuriken();
+          clearScreen();
         }        
     }
 }
@@ -57,7 +58,7 @@ function createShuriken () {
             //Game Over
             clearInterval(leftInterval);
             document.body.innerHTML = `<h1>Game Over!</h1><br>
-           <div class="narutoGif"> <video autoplay muted loop id="video" controls src="/naruto-game/img-naruto/narutoGif.mp4"></video></div>`
+           <div class="narutoGif"> <video preload="auto" autoplay muted loop id="video" controls src="/naruto-game/img-naruto/narutoGif.mp4"></video></div>`
 
         } else {
             shurikenPosition -= 10;
@@ -66,6 +67,12 @@ function createShuriken () {
     },20);
 
     setTimeout(createShuriken, randomTime);
+}
+
+function clearScreen () {
+    let h2 = document.querySelector('h2');
+
+    h2.innerHTML = ' ... ';    
 }
 
 

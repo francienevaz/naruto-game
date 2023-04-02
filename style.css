@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;900&family=New+Tegomin&family=Open+Sans:ital,wght@0,400;0,500;0,700;1,300&family=Reenie+Beanie&family=Righteous&display=swap');
 
 body {
-    background-color: orangered;
+    background-color: #DC872C;
     font-family: 'New Tegomin', serif;
     margin: 0;
     padding: 0;
 }
 
 .background {
-    background-color: black;
+    background-color: rgb(253, 253, 253);
     width: 100%;
     height: 500px;
     border: 1px solid black;
@@ -41,6 +41,7 @@ body {
 h1 {
     margin-top: 150px;
     text-align: center;
+    color: white;
 }
 
 h2 {
@@ -66,9 +67,9 @@ h2 {
 
 @keyframes hiddenShow {
     from {
-        color: orangered
+        color: #DC872C
     }
     to {
-        color: black;
+        color: white;
     }
 }
