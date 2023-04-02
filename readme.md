@@ -1,6 +1,6 @@
-<div>
+<p>
 <video autoplay loop src="./naruto-game/img-naruto/narutoGame.mp4"></video>
-</div>
+<p>
 
 Olá!
 
