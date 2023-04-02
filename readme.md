@@ -1,4 +1,6 @@
-![Naruto-game](https://user-images.githubusercontent.com/87665209/141696068-8a160406-37b0-40e8-9849-97b3738e0047.png)
+<div>
+<video autoplay loop src="./naruto-game/img-naruto/narutoGame.mp4"></video>
+</div>
 
 Olá!
 
