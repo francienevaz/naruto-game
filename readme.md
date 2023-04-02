@@ -1,5 +1,5 @@
 <p>
-<img src="./naruto-game/img-naruto/narutoGame.mp4"></img>
+<img src="./img-naruto/narutoGame.mp4"></img>
 <p>
 
 Olá!
