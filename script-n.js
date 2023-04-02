@@ -5,11 +5,11 @@ let position = 0;
 
 
 function handleKeyUp (event){
-    if (event.keyCode === 32){
+    if (event.keyCode === 38 || event.keyCode === 32 ){
         if (!isJumping) {
-          jump();  
-        }
-        
+          jump(); 
+          createShuriken();
+        }        
     }
 }
 function jump () {
@@ -56,7 +56,8 @@ function createShuriken () {
         } else if (shurikenPosition > 0 && shurikenPosition < 100 && position < 100) {
             //Game Over
             clearInterval(leftInterval);
-            document.body.innerHTML = `<h1>Game Over!</h1>`
+            document.body.innerHTML = `<h1>Game Over!</h1><br>
+           <div class="narutoGif"> <video autoplay muted loop id="video" controls src="/naruto-game/img-naruto/narutoGif.mp4"></video></div>`
 
         } else {
             shurikenPosition -= 10;
@@ -68,5 +69,4 @@ function createShuriken () {
 }
 
 
-createShuriken();
 document.addEventListener('keyup', handleKeyUp);

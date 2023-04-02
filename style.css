@@ -1,18 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;900&family=New+Tegomin&family=Open+Sans:ital,wght@0,400;0,500;0,700;1,300&family=Reenie+Beanie&family=Righteous&display=swap');
+
 body {
     background-color: orangered;
+    font-family: 'New Tegomin', serif;
+    margin: 0;
+    padding: 0;
 }
-
 
 .background {
     background-color: black;
     width: 100%;
     height: 500px;
     border: 1px solid black;
-    margin-top: 180px;
+    margin-top: 120px;
     background-image: url(/naruto-game/img-naruto/background.jpg);
     background-size: 1300px;
     background-repeat: repeat-x;
-    animation: slideright 150s infinite linear;
+    animation: slideright 100s infinite linear;
 }
 .naruto {
     width: 200px;
@@ -34,6 +38,23 @@ body {
     left: 1240px;
 }
 
+h1 {
+    margin-top: 150px;
+    text-align: center;
+}
+
+h2 {
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+    animation: hiddenShow 3s infinite linear;
+}
+.narutoGif {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @keyframes slideright {
     from {
         background-position: 70000% ;
@@ -41,4 +62,13 @@ body {
     to {
         background-position: 0;
 }
+}
+
+@keyframes hiddenShow {
+    from {
+        color: orangered
+    }
+    to {
+        color: black;
+    }
 }
