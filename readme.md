@@ -1,3 +1,4 @@
+## <a href="https://francienevaz.github.io/naruto-game">Clique aqui para Jogar</a>
 <p>
 <img src="./img-naruto/narutoGame.gif"></img>
 <p>
