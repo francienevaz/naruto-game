@@ -13,6 +13,7 @@ function handleKeyUp (event){
         }        
     }
 }
+
 function jump () {
     
     isJumping = true;
@@ -41,6 +42,7 @@ function jump () {
     },20);
 
 }
+
 function createShuriken () {
     const shuriken = document.createElement('div');
     let shurikenPosition = 1300;
