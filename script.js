@@ -29,8 +29,8 @@ function jump () {
                     clearInterval(downInterval);
                     isJumping = false;
                 } else {
-                   position -= 20;
-                naruto.style.bottom = position + "px"; 
+                    position -= 20;
+                    naruto.style.bottom = position + "px"; 
                 }
 
             },25);
@@ -45,11 +45,11 @@ function jump () {
 
 function createShuriken () {
     const shuriken = document.createElement('div');
-    let shurikenPosition = 1300;
-    let randomTime = Math.random() * 6000;
+    let shurikenPosition = 2400;
+    let randomTime = Math.random() * 10000;
 
     shuriken.classList.add('shuriken');
-    shuriken.style.left = 1300 + 'px';
+    shuriken.style.left = 2400 + 'px';
     background.appendChild(shuriken);
 
     let leftInterval = setInterval(() => {
@@ -59,8 +59,18 @@ function createShuriken () {
         } else if (shurikenPosition > 0 && shurikenPosition < 100 && position < 100) {
             //Game Over
             clearInterval(leftInterval);
-            document.body.innerHTML = `<h1>Game Over!</h1><br>
-           <div class="narutoGif"> <video autoplay muted loop id="video" src="/naruto-game/img-naruto/narutoGif.mp4"></video></div>`
+            document.body.innerHTML = `<h1>Game Over!</h1><br> <div class="narutoGif"> <video autoplay muted loop id="video" src="/naruto-game/img-naruto/narutoGif.mp4"></video></div>`
+            const reloadButton = document.createElement('button');
+            reloadButton.textContent = "Reload!";
+            reloadButton.classList.add('btn');
+            document.body.style.display = "flex";
+            document.body.style.alignItems = "center";
+            document.body.style.justifyContent = "center";
+            document.body.style.flexDirection = "column";
+            document.body.append(reloadButton);
+            reloadButton.addEventListener('click', () => {
+                location.reload(); 
+            });
 
         } else {
             shurikenPosition -= 10;
